@@ -27,9 +27,5 @@ grep -E "^303-" $fileName > phone_results.txt
 #Confirmed with the sample file that 
 grep -E "[a-zA-Z0-9]@geocities.com" $fileName > email_results.txt
 
-#Ask for follow up command line regular expression
-echo "Enter the Command Line RegEx to search for: "
-read clregex
-
 #Search for expression and output to txt file
-grep -Hn "$clregex" $fileName > command_results.txt
+grep -Hn $1 $2 > command_results.txt
